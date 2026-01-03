@@ -1,0 +1,17 @@
+neo4j:
+  name: neo4j-standalone
+  edition: "community"
+  acceptLicenseAgreement: "yes"
+  resources:
+    cpu: "1000m"
+    memory: "2Gi"
+  password: "processingpipeline"
+  plugins:
+    - "graph-data-science"
+
+volumes:
+  data:
+    mode: defaultStorageClass
+    defaultStorageClass:
+      requests:
+        storage: 4Gi
